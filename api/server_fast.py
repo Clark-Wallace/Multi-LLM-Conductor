@@ -6,8 +6,12 @@ Conductor Server - With Fast Mode Option
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 import asyncio
-from collaborative_conductor_v2 import CollaborativeConductor
-from fast_collaborative_conductor_v2 import FastCollaborativeConductor
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent.parent))
+
+from orchestration.collaborative_conductor_v2 import CollaborativeConductor
+from orchestration.fast_collaborative_conductor_v2 import FastCollaborativeConductor
 import json
 
 app = FastAPI()
