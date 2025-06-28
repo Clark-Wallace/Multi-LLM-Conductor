@@ -1,11 +1,11 @@
 #!/bin/bash
-# Simple run script for Conductor
+# Simple run script for Multi-LLM Conductor
 
-echo "🎭 Starting Conductor CLI Orchestrator..."
+echo "🎭 Starting Multi-LLM Conductor..."
 echo ""
 echo "Installing dependencies..."
 pip install -r requirements.txt
 
 echo ""
 echo "Starting server..."
-python server.py
+python api/server_fast.py

@@ -30,7 +30,7 @@ Multi-LLM Conductor orchestrates multiple AI agents (CLI-based and API-based) to
 1. Clone the repository:
 ```bash
 git clone https://github.com/Clark-Wallace/Multi-LLM-Conductor.git
-cd multi-llm-conductor
+cd Multi-LLM-Conductor
 ```
 
 2. Create virtual environment:
@@ -52,7 +52,7 @@ cp .env.example .env
 
 5. Run the server:
 ```bash
-python server_fast.py
+python api/server_fast.py
 ```
 
 6. Open browser to http://localhost:8200
@@ -64,7 +64,7 @@ python server_fast.py
 1. Enter a task description in the web UI
 2. Choose between FAST mode (parallel) or DETAILED mode (sequential)
 3. Watch agents collaborate in real-time
-4. Find generated files in `projects/your-project-timestamp/`
+4. Find generated files in `projects_master/your-project-timestamp/`
 
 ### Example Tasks
 
@@ -98,14 +98,14 @@ python server_fast.py
 ## 📁 Project Structure
 
 ```
-conductor/
+multi-llm-conductor/
 ├── core/               # Core orchestration logic
 ├── agents/             # Agent implementations
 │   ├── cli_agents/     # CLI-based agents (Claude)
 │   └── api_agents/     # API-based agents (GPT-4, etc.)
 ├── api/                # FastAPI server
 ├── ui/                 # Web interface
-├── projects/           # Generated project outputs
+├── projects_master/    # Generated project outputs
 └── tests/              # Test suite
 ```
 
