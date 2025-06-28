@@ -8,7 +8,13 @@ from fastapi.responses import HTMLResponse
 import asyncio
 import sys
 from pathlib import Path
+import os
+
+# Add parent directory to path for imports
 sys.path.append(str(Path(__file__).parent.parent))
+
+# Change working directory to project root
+os.chdir(Path(__file__).parent.parent)
 
 from orchestration.collaborative_conductor_v2 import CollaborativeConductor
 from orchestration.fast_collaborative_conductor_v2 import FastCollaborativeConductor
